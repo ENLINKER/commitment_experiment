@@ -6,7 +6,7 @@ def I_gen(n):
     return np.identity(n)
 
 def A1_gen(n,k,q):
-    A1_prime = np.random.randint(1, q, (n, k-n))  # 4以上10未満のn行 x (k-n)列の配列の乱数
+    A1_prime = np.random.randint(1, q, (n, k-n))  # 1以上q未満のn行 x (k-n)列の配列の乱数
     In = I_gen(n)
     A1 = np.concatenate([In, A1_prime], 1)
     return A1
@@ -44,12 +44,6 @@ def sender_commitment_bdlop(n,k,m,q,beta):
     return com
 
 
-# a = np.random.randint(0,4,6)
-# A = np.random.randint(0, 4, (3, 6))
-
-# print('A',A)
-# print('a',a)
-# print('A*a',A.dot(a))
 
 n = 140
 k = 220
@@ -78,17 +72,4 @@ tim_average = tim_all/10000
 print('all time of BDLOP protocol:',tim_all,tim_average)
 print('average time of BDLOP protocol:',tim_average)
 
-# z = zero = np.random.randint(0,1,5)
-# print(z)
 
-
-# Write the process (in this case, stop for 1 second)
-# time.sleep(1)
-
-# print(I_gen(3))
-# a = I_gen(3)
-# b = np.random.randint(0,30,6)
-# print(b)
-# print(b+b)
-# print(np.concatenate([a, a,a]))
-# print(np.random.randint(0, 1, (3, 6)))
