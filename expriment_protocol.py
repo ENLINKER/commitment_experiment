@@ -24,9 +24,6 @@ def sender_commitment(n,k,m,q,beta):
     A1 = A1_gen(n,k,q)
     A2 = A2_gen(n,k,m,q)
     A = np.concatenate([A1, A2])
-    # print('A',A)
-    # print('r',r)
-    # print('x',x)
     com = A.dot(r)+x
     return com
 def sender_commitment_bdlop(n,k,m,q,beta):
@@ -37,9 +34,6 @@ def sender_commitment_bdlop(n,k,m,q,beta):
     A1 = A1_gen(n,k,q)
     A2 = A2_gen(n,k,m,q)
     A = np.concatenate([A1, A2])
-    # print('A',A)
-    # print('r',r)
-    # print('x',x)
     com = A.dot(r)+x_
     return com
 
